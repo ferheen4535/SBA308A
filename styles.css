@@ -1,0 +1,93 @@
+.container {
+    background-image: url('background.jpg');
+    background-size: 1400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    }
+
+
+    .box1 {
+      width: 100%;
+        max-width: 1400px;
+        margin-bottom: 20px;
+       text-align: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        display: flex;
+      justify-content: center;
+      
+      }
+    
+    
+      .box2 {
+        width: 100%;
+        max-width: 500px; 
+      
+        font-family: Arial, Helvetica, sans-serif ;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 2px black;
+      }
+    
+    
+      .box3 {
+        width: 100px;
+ height: 100px;
+       width: 80%;
+        max-width: 300px;
+        margin-bottom: 20px;
+       text-align: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif ;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 2px black;
+      justify-content: center;
+      gap: 40px;
+    } */
+    
+    
+header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  #search-section input {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  .spell-item {
+    background-color: #333;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .spell-item:hover {
+    background-color: #555;
+  }
+  
+  #spell-details img {
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  
+
+ 
