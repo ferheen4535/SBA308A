@@ -28,9 +28,10 @@
     
     
       .box2 {
+        
         width: 100%;
         max-width: 500px; 
-      
+        box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif ;
         text-align: center;
         color: rgb(255, 255, 255);
@@ -90,4 +91,45 @@ header h1 {
   }
   
 
- 
+  #divResult .spell-item {
+    margin: 8px 0;
+    padding: 6px 10px;
+    background-color: #f3f3f3;
+    border-radius: 6px;
+  }
+
+  #characterContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .characterCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px;
+    width: 200px;
+    text-align: center;
+  }
+  .characterCard img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .spell-button {
+    margin: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .char-card {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .char-card img {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
