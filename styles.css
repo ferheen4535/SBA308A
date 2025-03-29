@@ -9,122 +9,205 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     }
 
 
     .box1 {
       width: 100%;
         max-width: 1400px;
-        margin-bottom: 20px;
-       
-       
-      
-       display: flex;
+        margin-bottom: -160px;
+        height: auto;
+      display: flex;
       justify-content: center;
-      
       }
     
-    
-      .box2 {
-        
-        width: 100%;
-        max-width: 500px; 
+ .box2 {
+         width: 100%;
+        max-width: 460px; 
         box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif ;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        text-shadow: 2px 2px 2px black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        
+        display: flex;
+       
       }
+    
+      header {
+        display: block;
+        color: rgb(255, 255, 255);
+        padding: 20px 24px;
+        height: 450px;
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        border-radius: 12px;
+        background: linear-gradient(64deg, #5e4b8b39, #603bac);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        letter-spacing: 1px;
+        border: 2px solid #ffffff2e;
+        transition: transform 0.3s ease;
+        
+        
+      }
+      
     
     
       .box3 {
-        
- height: 100px;
+        height: 100px;
        width: 80%;
         max-width: 300px;
         margin-bottom: 20px;
-     display: flex;
-        font-family: Arial, Helvetica, sans-serif ;
+    display: flex;
+        font-family: Garamond;
         text-align: center;
         color: rgb(255, 255, 255);
-        text-shadow: 2px 2px 2px black;
+        
       justify-content: center;
       gap: 40px;
     } 
     
     
-header h1 {
-    font-size: 2rem;
-    color: #ffffff;
-  }
-  
-  #search-section input {
-    padding: 10px;
-    width: 80%;
-    margin: 10px 0;
-    border-radius: 4px;
-    border: none;
-  }
-  
-  .spell-item {
-    background-color: #333;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .spell-item:hover {
-    background-color: #555;
-  }
-  
-  #spell-details img {
-    width: 200px;
-    margin-top: 20px;
-    border-radius: 8px;
-  }
-  
+/* === Spell Dropdown & Inputs === */
+#search-section input, #spellSelect {
+  padding: 12px;
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
 
-  #divResult .spell-item {
-    margin: 8px 0;
-    padding: 6px 10px;
-    background-color: #f3f3f3;
-    border-radius: 6px;
-  }
+/* === Spell Item List (if used) === */
+.spell-item {
+  background-color: #aba4a4;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+.spell-item:hover {
+  background-color: #555;
+}
 
-  #characterContainer {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .characterCard {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 8px;
-    width: 200px;
-    text-align: center;
-  }
-  .characterCard img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
+/* === Spell Info Display === */
+#spellInfo {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 200px;
+  color: black;
+  margin-top: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  text-align: left;
+  transition: all 0.3s ease;
+  font-size: 12 px;
+  padding: 5px 5px 10px 20px ;
+}
 
-  .spell-button {
-    margin: 5px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+/* === Character Image Grid === */
+#characterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.characterCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  width: 180px;
+  text-align: center;
+  color: white;
+  transition: transform 0.3s;
+}
+.characterCard:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.characterCard img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.characterCard h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.characterCard {
+  width: 140px;
+}
+
+
+/* === Buttons === */
+.spell-button {
+  margin: 5px;
+  padding: 10px 16px;
+  background-color: #6d28d9;
+  color: white;
+  border: none;
+  border-radius: 8px;
   
-  .char-card {
-    display: inline-block;
-    text-align: center;
-    margin: 10px;
-  }
+  transition: all 0.3s;
+}
+.spell-button:hover {
+  background-color: #8b5cf6;
+  transform: translateY(-2px);
+}
+
+/* === Progress Bar (if used) === */
+#progressBar {
+  width: 100%;
+  max-width: 400px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.progressBar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #22c55e;
+  transition: width 0.4s ease-in-out;
+}
+
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+}
+
+
+cardbox {
+  display: block;
+  color: rgb(255, 255, 255);
+  padding: 20px 24px;
+  height: 450px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 12px;
+  background: linear-gradient(64deg, #5e4b8b39, #603bac);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  letter-spacing: 1px;
+  border: 2px solid #ffffff2e;
+  transition: transform 0.3s ease;
   
-  .char-card img {
-    border-radius: 8px;
-    border: 1px solid #ccc;
-  }
+  
+}
