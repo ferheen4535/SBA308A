@@ -62,6 +62,67 @@ spellSelect.addEventListener("change", async () => {
   }
 });
 
+////////////////////////////////
+
+async function getRandomCharacter() {
+  const url = "https://hp-api.onrender.com/api/characters";
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Render character images as a slideshow
+async function getRandomCharacter() {
+  const url = "https://hp-api.onrender.com/api/characters";
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    return data.slice(0, 10); // Use only the first 10 images
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Render character images as a slideshow
+async function renderCharacterSlideshow() {
+  const characterContainer = document.getElementById("characterContainer");
+  const characters = await getRandomCharacter();
+  if (!characters || characters.length === 0) return;
+
+  let currentIndex = 0;
+
+  const imgElement = new Image();
+  imgElement.width = 620;
+  imgElement.height = 320;
+  characterContainer.appendChild(imgElement);
+
+  function showNextCharacter() {
+    const character = characters[currentIndex];
+    imgElement.src = character.image || 'fallback.jpg';
+    imgElement.alt = character.name;
+
+    currentIndex = (currentIndex + 1) % characters.length;
+  }
+
+  // Initial display and set interval for slideshow///
+  showNextCharacter();
+  setInterval(showNextCharacter, 3000); // Change image every 3 seconds
+}
+
+// Call the function to display character slideshow//
+renderCharacterSlideshow();
+
+///https://youtu.be/uof_zYxtnp0?si=Qy5cwnQ569hGHBMP//adding music//
+
+
+
+
+
+
 ///cursor///
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
@@ -129,6 +190,26 @@ animateCircles();
 ////////////////////////////////////////////
 
 //debugged///
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //source: https://www.youtube.com/watch?v=5QlE6o-iYcE//
 
 //https://youtu.be/7eE8xPyXSR4?si=7FqWARnZahE3yyun// cursor code//

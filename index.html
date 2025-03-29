@@ -11,28 +11,51 @@
 </head>
 
 <body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hogwarts Spell Finder</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
     
-    <div class="container">
-
-        <div class="box1">
-            <div class="box2"> 
-                <header><h2>Find the right spell for you!
+    <body>
+        <!-- Audio section (commented out) -->
+        <audio controls autoplay>
+            <source src="the-mischievous-wizard-311524.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+    
+        <div class="container">
+    
+       
+            <div class="box1">
                 
-                </h2>
-                   <select id="spellSelect">
-                <option value="">Select a spell</option>
-                </select>
-                <div id="spellInfo"></div>
-                
-                
-            </div>
-
-            <div class="box3">
-                <cardbox> </carbox>
-                <div id="characterContainer"></div>
+               
+                <div class="box2"> 
+                    <header>
+                        <h2>Find the right spell for you!</h2>
+                        <select id="spellSelect">
+                            <option value="">Select a spell</option>
+                            <!-- Options for spells will be added dynamically here -->
+                        </select>
+                        <div id="spellInfo"></div>
+                    </header>
                 </div>
+    <div></div>
+             <div class = "box3">
+                <div id="characterContainer" class="character-container">
+                    <!-- Character cards will be appended here by JavaScript -->
+                  </div>
+              
+                  <div id="character-images" class="character-images">
+                    <!-- Character images will be appended here based on spell selection -->
+                </div>
+            </div>
         </div>
         </div>
+    
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
@@ -57,3 +80,5 @@
         <script src="script.js"></script>
 </body>
 </html>
+
+
