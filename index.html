@@ -35,7 +35,7 @@
                
                 <div class="box2"> 
                     <header>
-                        <h2>Find the right spell for you!</h2>
+                        <h2>Find your spell!</h2>
                         <select id="spellSelect">
                             <option value="">Select a spell</option>
                             <!-- Options for spells will be added dynamically here -->
@@ -43,19 +43,25 @@
                         <div id="spellInfo"></div>
                     </header>
                 </div>
-    <div></div>
-             <div class = "box3">
-                <div id="characterContainer" class="character-container">
-                    <!-- Character cards will be appended here by JavaScript -->
-                  </div>
-              
-                  <div id="character-images" class="character-images">
-                    <!-- Character images will be appended here based on spell selection -->
+                
+                <div class = "box3">
+                    <div id="commentSection">
+                        <h2>Who has the best spells?</h2>
+                    <div id="characterContainer" class="character-container">
+                        <!-- Character cards will be appended here by JavaScript -->
+                    </div>
+                  
+                    <div id="character-images" class="character-images">
+                        <!-- Character images will be appended here based on spell selection --> 
+                    <input type="text" id="characterName" placeholder="Character Name">
+                    <textarea id="commentText" placeholder="Your comment..."></textarea>
+                    <button onclick="submitComment()">Submit Comment</button>
+                    <p id="commentStatus"></p>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-    
+      <div>
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
@@ -77,7 +83,10 @@
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
+    
+
         <script src="script.js"></script>
+        
 </body>
 </html>
 

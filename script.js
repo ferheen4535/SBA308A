@@ -2,20 +2,20 @@ const spellSelect = document.getElementById("spellSelect");
 const spellInfo = document.getElementById("spellInfo");
 const progressBar = document.getElementById("progressBar");
 
-// Initial load: populate dropdown with all spells
+// Initial load: populate dropdown with all spells//
 async function initialLoad() {
   try {
     const response = await fetch("https://hp-api.onrender.com/api/spells");
     const data = await response.json();
     console.log("Spells Data:", data);
 
-    // Add default option
+    // Add default option//
     const defaultOption = document.createElement("option");
     defaultOption.value = "";
     defaultOption.textContent = "-- Select a Spell --";
     spellSelect.appendChild(defaultOption);
 
-    // Add each spell to dropdown
+    // Add each spell to dropdown//
     data.forEach((spell) => {
       const option = document.createElement("option");
       option.value = spell.name;
@@ -31,7 +31,7 @@ async function initialLoad() {
 
 initialLoad();
 
-// When a spell is selected
+// When a spell is selected//
 spellSelect.addEventListener("change", async () => {
   const selectedSpell = spellSelect.value;
 
@@ -81,13 +81,13 @@ async function getRandomCharacter() {
   try {
     const res = await fetch(url);
     const data = await res.json();
-    return data.slice(0, 10); // Use only the first 10 images
+    return data.slice(0, 10); // Use only the first 10 images//
   } catch (error) {
     console.error(error);
   }
 }
 
-// Render character images as a slideshow
+// Render character images as a slideshow//
 async function renderCharacterSlideshow() {
   const characterContainer = document.getElementById("characterContainer");
   const characters = await getRandomCharacter();
@@ -96,8 +96,8 @@ async function renderCharacterSlideshow() {
   let currentIndex = 0;
 
   const imgElement = new Image();
-  imgElement.width = 620;
-  imgElement.height = 320;
+  imgElement.width = 200;
+  imgElement.height = 200;
   characterContainer.appendChild(imgElement);
 
   function showNextCharacter() {
@@ -115,6 +115,49 @@ async function renderCharacterSlideshow() {
 
 // Call the function to display character slideshow//
 renderCharacterSlideshow();
+
+
+async function submitComment() {
+  const characterName = document.getElementById("characterName").value.trim();
+  const commentText = document.getElementById("commentText").value.trim();
+  const commentStatus = document.getElementById("commentStatus");
+
+  if (!characterName || !commentText) {
+    commentStatus.textContent = "Please enter both character name and comment.";
+    commentStatus.style.color = "white";
+    return;
+  }
+
+  const commentData = {
+    character: characterName,
+    comment: commentText,
+  };
+
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/comments", {
+      method: "POST",
+      body: JSON.stringify(commentData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      commentStatus.textContent = "Comment submitted successfully!";
+      commentStatus.style.color = "green";
+      console.log("Server Response:", result);
+    } else {
+      commentStatus.textContent = "Failed to submit comment.";
+      commentStatus.style.color = "white";
+    }
+  } catch (error) {
+    console.error("Error submitting comment:", error);
+    commentStatus.textContent = "An error occurred.";
+    commentStatus.style.color = "white";
+  }
+}
+
 
 ///https://youtu.be/uof_zYxtnp0?si=Qy5cwnQ569hGHBMP//adding music//
 
@@ -193,23 +236,7 @@ animateCircles();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //source: https://www.youtube.com/watch?v=5QlE6o-iYcE//
 
 //https://youtu.be/7eE8xPyXSR4?si=7FqWARnZahE3yyun// cursor code//
+//codes used from labs//

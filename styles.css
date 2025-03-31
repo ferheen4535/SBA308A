@@ -1,10 +1,10 @@
 .container {
     background-image: url('background.jpg');
-    background-size: 1400px;
+    background-size: 1500px;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    height: 800px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,8 +14,7 @@
 
     .box1 {
       width: 100%;
-        max-width: 1400px;
-        margin-bottom: -160px;
+        max-width: 1500px;
         height: auto;
       display: flex;
       justify-content: center;
@@ -23,50 +22,51 @@
     
  .box2 {
          width: 100%;
-        max-width: 460px; 
+        max-width: 390px; 
+        margin-bottom: -160px;
+        margin-left: 5%;
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
         text-align: left;
-        
         display: flex;
        
       }
-    
+    /*spell finder box*/
       header {
         display: block;
         color: rgb(255, 255, 255);
         padding: 20px 24px;
-        height: 450px;
+        height: 470px;
         width: 100%;
         max-width: 500px;
         margin: auto;
         border-radius: 12px;
-        background: linear-gradient(64deg, #5e4b8b39, #603bac);
+        background: linear-gradient(64deg, #f1eff739, #8852f5a0);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         font-family: Arial, Helvetica, sans-serif;
         text-align: left;
+        font-color: hsl(0, 1%, 22%);
         letter-spacing: 1px;
         border: 2px solid #ffffff2e;
         transition: transform 0.3s ease;
-        
-        
+ 
       }
       
     
-    
+  /* pic box background*/
       .box3 {
-        height: 100px;
-       width: 80%;
-        max-width: 300px;
-        margin-bottom: 10px;
-        margin-left: 40px;
-        margin-top: 40px;
-        font-family: Garamond;
-        text-align: center;
-        color: rgb(255, 255, 255);
+        max-height: 540px;       
+        max-width: 70%;
         
-      justify-content: center;
-      gap: 40px;
+        margin-left: 200px;
+        margin-top: 150px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: rgb(90, 92, 235);
+        display: flex;
+
+
+      
     } 
     
     
@@ -77,14 +77,16 @@
   max-width: 500px;
   margin: 10px 0;
   border-radius: 8px;
+ 
   border: none;
   font-size: 1rem;
 }
 
-/* === Spell Item List (if used) === */
+/* === Spell Item List === */
 .spell-item {
   background-color: #aba4a4;
   margin: 10px 0;
+  
   padding: 10px;
   border-radius: 6px;
   transition: background-color 0.3s;
@@ -97,8 +99,8 @@
 #spellInfo {
   background-color: rgba(255, 255, 255, 0.9);
   height: 200px;
-  color: black;
-  margin-top: 20px;
+  color: rgb(133, 133, 133);
+  margin-top: 0px;
   border-radius: 12px;
   max-width: 600px;
   text-align: left;
@@ -107,43 +109,6 @@
   padding: 5px 5px 10px 20px ;
 }
 
-/* === Character Image Grid === */
-#characterContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 20px;
-}
-
-.characterCard {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 16px;
-  width: 180px;
-  text-align: center;
-  color: white;
-  transition: transform 0.3s;
-}
-.characterCard:hover {
-  transform: scale(1.05);
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.characterCard img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-.characterCard h3 {
-  font-size: 16px;
-  margin: 0;
-}
-
-.characterCard {
-  width: 140px;
-}
 
 
 /* === Buttons === */
@@ -161,24 +126,71 @@
   background-color: #8b5cf6;
   transform: translateY(-2px);
 }
+------------
 
-/* === Progress Bar (if used) === */
-#progressBar {
-  width: 100%;
+
+img {
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  
+}
+
+#commentSection {
+  
+  border-radius: 12px;
+  background: linear-gradient(64deg, #5e4b8b39, #8852f57c);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  border: 2px solid #ffffff2e;
+  padding: 20px;
   max-width: 400px;
-  height: 6px;
-  background-color: #333;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-top: 20px;
-}
-.progressBar-fill {
-  height: 100%;
-  width: 0%;
-  background-color: #22c55e;
-  transition: width 0.4s ease-in-out;
+  margin: 10px auto;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
+#commentSection h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+#characterName,
+#commentText {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#commentText {
+  min-height: 120px;
+}
+
+button {
+  background-color: #4b0082;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6a0dad;
+}
+
+#commentStatus {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/*cursor*/
 
 .circle {
   height: 24px;
@@ -190,55 +202,4 @@
   left: 0;
   pointer-events: none;
   z-index: 99999999; /* so that it stays on top of all other elements */
-}
-
-
-cardbox {
-  display: block;
-  color: rgb(255, 255, 255);
-  padding: 20px 24px;
-  height: 450px;
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
-  border-radius: 12px;
-  background: linear-gradient(64deg, #5e4b8b39, #603bac);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  letter-spacing: 1px;
-  border: 2px solid #ffffff2e;
-  transition: transform 0.3s ease;
-  
-  
-}
-
------------------
-
-button {
-  background-color: #4b0082;
-  color: white;
-  padding: 5px 5x;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-button:hover {
-  background-color: #6a0dad;
-}
-
-#characterContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-img {
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
 }
